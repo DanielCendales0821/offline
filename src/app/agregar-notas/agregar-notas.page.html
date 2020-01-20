@@ -1,0 +1,20 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>agregarNotas</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <form [formGroup]="formGroup" (ngSubmit)="agregarNotas()">
+        <ion-item>
+            <ion-label position="stacked">Titulo</ion-label>
+            <ion-input placeholder="titulo" type="text" formControlName="titulo"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label position="stacked">Descripcion</ion-label>
+            <ion-input placeholder="descripcion" type="text" formControlName="descripcion"></ion-input>
+        </ion-item>
+        <ion-button expand="block" type="submit" [disabled]="!formGroup.valid">Iniciar</ion-button>
+    </form>
+
+</ion-content>

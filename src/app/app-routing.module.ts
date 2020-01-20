@@ -5,6 +5,14 @@ const routes: Routes = [
   {
     path: '',
     loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
+  },
+  {
+    path: 'agregar-notas',
+    loadChildren: () => import('./agregar-notas/agregar-notas.module').then( m => m.AgregarNotasPageModule)
+  },
+  {
+    path: 'editar-notas',
+    loadChildren: () => import('./editar-notas/editar-notas.module').then( m => m.EditarNotasPageModule)
   }
 ];
 @NgModule({
